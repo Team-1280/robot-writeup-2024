@@ -30,17 +30,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ steps.date.outputs.date }}-${{ github.run_number }}
-          release_name: Release ${{ steps.date.outputs.date }}-${{ github.run_number }}
+          release_name:
+            Release ${{ steps.date.outputs.date }}-${{ github.run_number }}
           draft: false
           prerelease: false
 
       - name: Upload Release Asset
-        id: upload-release-asset 
+        id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./root.pdf
+          asset_path: ./build/root.pdf
           asset_name: robot-writeup-2024.pdf
           asset_content_type: application/pdf
