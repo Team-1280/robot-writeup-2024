@@ -1,5 +1,7 @@
 # Robot Writeup 2024
 
+[![Compile LaTeX and Release PDF](https://github.com/Team-1280/tech-binder-2024/actions/workflows/release.yml/badge.svg)](https://github.com/Team-1280/tech-binder-2024/actions/workflows/release.yml)
+
 Writeup for Team 1280's robot for the 2024 Crescendo season.
 
 Web version coming soon.
