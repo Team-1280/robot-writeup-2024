@@ -4,22 +4,23 @@
 \begin{document}
 
 % working title, update later
-\title{Building Robot 2024 (working title)}
-\author{Youwen Wu, Warren Lin}
-\date{\today}
-\maketitle
+\input{src/title}
 
-\begin{abstract}
-  Team 1280 designed an innovative robot for the 2024 FRC Crescendo
-  competition through an interdisciplinary and iterative process. Key
-  features include a precision ring intake, high-speed launcher, agile
-  swerve drivebase, and advanced autonomous capabilities. This writeup
-  details the team's engineering approach, from initial brainstorming to
-  final validation, that resulted in a high-performing robot excelling
-  in the competition environment.
-\end{abstract}
+\newpage
+\input{src/foreword}
 
+\newpage
+\begin{center}
+  \vspace*{\fill}
+  \large
+  This page intentionally left blank.
+  \vspace*{\fill}
+\end{center}
 
+\newpage
+\tableofcontents
+
+\newpage
 \section{Introduction}
 
 Our 2024 robot incorporates numerous new technologies we've been
@@ -37,24 +38,82 @@ and our process.
 
 \input{src/innovations}
 
+% From this point onward, subsections should each have their own page, so
+% we make them bigger to act as page headers
+
+% Customize subsection headers
+\titleformat{\subsection}
+{\normalfont\LARGE\bfseries}{\thesubsection}{1em}{}
+
+\newpage
+
 % TODO: add more sections
+\newpage
+\section{Game Analysis}
 
-\section{Drivebase}
+\input{src/analysis/game}
 
+\newpage
+\section{Subsystems Design}
+
+\input{src/analysis/subsystems}
+
+\newpage
+\section{Robot Design}
+
+% TODO: add picture or render of the robot
+
+\newpage
+\subsection{Drivebase}
 % TODO: add yapping about the drivebase and how good it is
-\input{src/drivebase}
+\input{src/design/drivebase}
 
-\section{Vision}
+\newpage
+\subsection{Intake}
 
+\subsubsection{Prototyping}
+% TODO: add some stuff about our intake trial and error process to get
+% it to function properly
+\input{src/design/intake_prototyping}
+
+\subsubsection{Final design}
+\input{src/design/intake}
+
+\newpage
+\subsection{Shooter}
+\subsubsection{Prototyping}
+\input{src/design/shooter_prototyping}
+
+\subsubsection{Final design}
+\input{src/design/shooter}
+
+\newpage
+\subsection{Climber}
+\input{src/design/climber}
+
+\newpage
+\section{Programming}
+
+% TODO: add image or brief text blurb about programming
+
+\newpage
+\subsection{Vision}
 % TODO: add yapping about vision
-\input{src/vision}
+\input{src/programming/vision}
 
-\section{Driver Controls}
+\newpage
+% TODO: add yapping about autonomous
+\subsection{Autonomous}
+\input{src/programming/autonomous}
 
-\input{src/controls}
-
+\newpage
+\subsection{Controls}
 % TODO: discuss the genius of jankboard
+\input{src/programming/controls}
 
+
+
+\newpage
 \printbibliography
 
 \end{document}
